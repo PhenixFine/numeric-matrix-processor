@@ -7,19 +7,19 @@ fun main() {
         when (command) {
             1, 3 -> matricesWork(command)
             2 -> matrixTimesConstant()
+            4 -> transpose()
         }
         println()
     }
 }
 
 private fun menu(): String {
-    return (
-            "1. Add matrices\n" +
-                    "2. Multiply matrix by a constant\n" +
-                    "3. Multiply matrices\n" +
-                    "0. Exit\n" +
-                    "Your choice: "
-            )
+    return ("1. Add matrices\n" +
+            "2. Multiply matrix by a constant\n" +
+            "3. Multiply matrices\n" +
+            "4. Transpose matrix\n" +
+            "0. Exit\n" +
+            "Your choice: ")
 }
 
 private fun matricesWork(command: Int) {
@@ -39,6 +39,28 @@ private fun matrixTimesConstant() {
 
     println("The result is:")
     matrix.times(number).print()
+}
+
+private fun transpose() {
+    val choice = getString(transposeMenu()).toIntOrNull()
+    if (!(1..4).contains(choice)) return
+    val matrix: Matrix = getMatrix()
+
+    println("The result is:")
+    when (choice) {
+        1 -> matrix.transposeMain().print()
+        2 -> matrix.transposeSide().print()
+        3 -> matrix.transposeVertical().print()
+        4 -> matrix.transposeHorizontal().print()
+    }
+}
+
+private fun transposeMenu(): String {
+    return ("\n1. Main diagonal\n" +
+            "2. Side diagonal\n" +
+            "3. Vertical line\n" +
+            "4. Horizontal line\n" +
+            "Your choice: ")
 }
 
 private fun getMatrix(print: String = ""): Matrix {
