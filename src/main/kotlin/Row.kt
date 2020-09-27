@@ -4,9 +4,7 @@ data class Row(val row: List<Double>) {
 
     fun add(row: Row): Row {
         val hold = mutableListOf<Double>()
-        for (i in this.row.indices) {
-            hold.add(this.row[i] + row.row[i])
-        }
+        for (i in this.row.indices) hold.add(this.row[i] + row.row[i])
         return Row(hold)
     }
 
@@ -18,11 +16,11 @@ data class Row(val row: List<Double>) {
 
     fun times(column: Row): Double {
         var number = 0.0
-       for (i in this.row.indices) {
-             number += this.row[i] * column.row[i]
-        }
+        for (i in this.row.indices) number += this.row[i] * column.row[i]
         return number
     }
+
+    fun reversed() = Row(this.row.reversed())
 
     fun print() {
         for (i in this.row.indices) {
