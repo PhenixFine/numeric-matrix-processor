@@ -61,9 +61,12 @@ data class Matrix(val column: List<Row>) {
             matrix.column.size > 2 -> {
                 var positive = true
                 for (i in matrix.column[0].row.indices) {
+                    val number = { matrix.column[0].row[i] }
+                    val work = { determinantWork(filteredMatrix(matrix, i)) }
+                    val checkValue = { if (number() == 0.0) 0.0 else number() * work() }
                     if (positive) {
-                        d += matrix.column[0].row[i] * determinantWork(filteredMatrix(matrix, i))
-                    } else d -= matrix.column[0].row[i] * determinantWork(filteredMatrix(matrix, i))
+                        d += checkValue()
+                    } else d -= checkValue()
                     positive = !positive
                 }
             }
