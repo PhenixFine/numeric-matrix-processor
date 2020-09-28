@@ -8,6 +8,7 @@ fun main() {
             1, 3 -> matricesWork(command)
             2 -> matrixTimesConstant()
             4 -> transpose()
+            5 -> determinant()
         }
         println()
     }
@@ -18,6 +19,7 @@ private fun menu(): String {
             "2. Multiply matrix by a constant\n" +
             "3. Multiply matrices\n" +
             "4. Transpose matrix\n" +
+            "5. Calculate a determinant\n" +
             "0. Exit\n" +
             "Your choice: ")
 }
@@ -61,6 +63,13 @@ private fun transposeMenu(): String {
             "3. Vertical line\n" +
             "4. Horizontal line\n" +
             "Your choice: ")
+}
+
+private fun determinant() {
+    val number = getMatrix().determinant()
+
+    println("The result is:")
+    if (number != null) println(number) else error()
 }
 
 private fun getMatrix(print: String = ""): Matrix {
