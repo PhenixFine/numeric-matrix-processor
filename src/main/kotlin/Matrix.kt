@@ -51,6 +51,39 @@ data class Matrix(val column: List<Row>) {
         return Matrix(holdMatrix)
     }
 
+    fun determinant(): Double? {
+        return if (this.column.size == this.column[0].row.size) determinantWork(Matrix(this.column)) else null
+    }
+
+    private fun determinantWork(matrix: Matrix): Double {
+        var d = 0.0
+        when {
+            matrix.column.size > 2 -> {
+                var positive = true
+                for (i in matrix.column[0].row.indices) {
+                    if (positive) {
+                        d += matrix.column[0].row[i] * determinantWork(filteredMatrix(matrix, i))
+                    } else d -= matrix.column[0].row[i] * determinantWork(filteredMatrix(matrix, i))
+                    positive = !positive
+                }
+            }
+            matrix.column.size == 2 -> d =
+                matrix.column[0].row[0] * matrix.column[1].row[1] - matrix.column[1].row[0] * matrix.column[0].row[1]
+            else -> d = matrix.column[0].row[0]
+        }
+        return d
+    }
+
+    private fun filteredMatrix(matrix: Matrix, index: Int): Matrix {
+        val holdMatrix = mutableListOf<Row>()
+        for (i in 1..matrix.column.lastIndex) {
+            val holdRow = mutableListOf<Double>()
+            for (j in matrix.column[i].row.indices) if (j != index) holdRow.add(matrix.column[i].row[j])
+            holdMatrix.add(Row(holdRow))
+        }
+        return Matrix(holdMatrix)
+    }
+
     fun print() {
         for (i in this.column) i.print()
     }
