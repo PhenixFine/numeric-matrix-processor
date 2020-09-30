@@ -1,5 +1,3 @@
-import java.text.DecimalFormat
-
 data class Row(val row: List<Double>) {
 
     fun add(row: Row): Row {
@@ -21,14 +19,4 @@ data class Row(val row: List<Double>) {
     }
 
     fun reversed() = Row(this.row.reversed())
-
-    fun print() {
-        for (i in this.row.indices) {
-            val format = DecimalFormat()
-            format.isDecimalSeparatorAlwaysShown = false
-            val num = this.row[i]
-            print(format.format(num).replace(",", "") + if (i != row.lastIndex) " " else "")
-        }
-        println()
-    }
 }
