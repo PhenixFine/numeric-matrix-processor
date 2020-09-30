@@ -1,0 +1,219 @@
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 1
+Enter size of first matrix: 4 5
+Enter first matrix:
+1 2 3 4 5
+3 2 3 2 1
+8 0 9 9 1
+1 3 4 5 6
+Enter size of second matrix: 4 5
+Enter second matrix:
+1 1 4 4 5
+4 4 5 7 8
+1 2 3 9 8
+1 0 0 0 1
+The result is:
+2 3  7  8 10
+7 6  8  9  9
+9 2 12 18  9
+2 3  4  5  7
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 2
+Enter size of matrix: 3 3
+Enter matrix:
+1 2 3
+4 5 6
+7 8 9
+Enter constant: 3
+The result is:
+ 3  6  9
+12 15 18
+21 24 27
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 3
+Enter size of first matrix: 3 3
+Enter first matrix:
+1 7 7
+6 6 4
+4 2 1
+Enter size of second matrix: 3 3
+Enter second matrix:
+3 2 4
+5 5 9
+8 0 10
+The result is:
+94 37 137
+80 42 118
+30 18  44
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 4
+
+1. Main diagonal
+2. Side diagonal
+3. Vertical line
+4. Horizontal line
+Your choice: 1
+Enter size of matrix: 4 4
+Enter matrix:
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+The result is:
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 4
+
+1. Main diagonal
+2. Side diagonal
+3. Vertical line
+4. Horizontal line
+Your choice: 2
+Enter size of matrix: 4 4
+Enter matrix:
+1 1 1 -1
+2 2 2 -2
+3 3 3 -3
+4 4 4 -4
+The result is:
+-4 -3 -2 -1
+ 4  3  2  1
+ 4  3  2  1
+ 4  3  2  1
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 4
+
+1. Main diagonal
+2. Side diagonal
+3. Vertical line
+4. Horizontal line
+Your choice: 3
+Enter size of matrix: 4 4
+Enter matrix:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+The result is:
+ 4  3  2  1
+ 8  7  6  5
+12 11 10  9
+16 15 14 13
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 4
+
+1. Main diagonal
+2. Side diagonal
+3. Vertical line
+4. Horizontal line
+Your choice: 4
+Enter size of matrix: 4 4
+Enter matrix:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+The result is:
+13 14 15 16
+ 9 10 11 12
+ 5  6  7  8
+ 1  2  3  4
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 5
+Enter size of matrix: 5 5
+Enter matrix:
+1 2 3 4 5
+4 5 6 4 3
+0 0 0 1 5
+1 3 9 8 7
+5 8 4 7 11
+The result is:
+191.0
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 6
+Enter size of matrix: 3 3
+Enter matrix:
+2 -1 0
+0 1 2
+1 1 0
+The Result is:
+ 0.33   0  0.33
+-0.33   0  0.67
+ 0.17 0.5 -0.33
+
+1. Add matrices
+2. Multiply matrix by a constant
+3. Multiply matrices
+4. Transpose matrix
+5. Calculate a determinant
+6. Inverse matrix
+0. Exit
+Your choice: 0
+
+
+Process finished with exit code 0
