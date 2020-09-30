@@ -9,6 +9,7 @@ fun main() {
             2 -> matrixTimesConstant()
             4 -> transpose()
             5 -> determinant()
+            6 -> inverse()
         }
         println()
     }
@@ -20,6 +21,7 @@ private fun menu(): String {
             "3. Multiply matrices\n" +
             "4. Transpose matrix\n" +
             "5. Calculate a determinant\n" +
+            "6. Inverse matrix\n" +
             "0. Exit\n" +
             "Your choice: ")
 }
@@ -70,6 +72,13 @@ private fun determinant() {
 
     println("The result is:")
     if (number != null) println(number) else error()
+}
+
+private fun inverse() {
+    val matrix = getMatrix()
+
+    println("The Result is:")
+    matrix.inverse()?.print() ?: println("This matrix doesn't have an inverse.")
 }
 
 private fun getMatrix(print: String = ""): Matrix {
